@@ -1,0 +1,8 @@
+c:\users\sonpc\documents\visual studio 2017\Projects\ASMCSHARP\ASMCSHARP\bin\Debug\ASMCSHARP.exe.config
+c:\users\sonpc\documents\visual studio 2017\Projects\ASMCSHARP\ASMCSHARP\bin\Debug\ASMCSHARP.exe
+c:\users\sonpc\documents\visual studio 2017\Projects\ASMCSHARP\ASMCSHARP\bin\Debug\ASMCSHARP.pdb
+c:\users\sonpc\documents\visual studio 2017\Projects\ASMCSHARP\ASMCSHARP\bin\Debug\MySql.Data.dll
+c:\users\sonpc\documents\visual studio 2017\Projects\ASMCSHARP\ASMCSHARP\bin\Debug\MySql.Data.xml
+c:\users\sonpc\documents\visual studio 2017\Projects\ASMCSHARP\ASMCSHARP\obj\Debug\ASMCSHARP.csprojResolveAssemblyReference.cache
+c:\users\sonpc\documents\visual studio 2017\Projects\ASMCSHARP\ASMCSHARP\obj\Debug\ASMCSHARP.exe
+c:\users\sonpc\documents\visual studio 2017\Projects\ASMCSHARP\ASMCSHARP\obj\Debug\ASMCSHARP.pdb
