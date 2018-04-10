@@ -12,42 +12,16 @@ namespace ASMCSHARP
         // Tạo form Internet Banking.
         public void InternetBanking()
         {
-            while (true)
-            {
-                Console.WriteLine("-------Wellcom to InternetBanking--------");
-                Console.WriteLine("1. Login.");
-                Console.WriteLine("2. Signup.");
-                int choice = int.Parse(Console.ReadLine());
 
-                switch (choice)
-                {
-                    case 1:
-                        Login();
-                        break;
-                    case 2:
-                        Signup();
-                        break;
-                    default:
-                        Console.WriteLine("Please enter 1 or 2 !!!");
-                        break;
-                }
-            }
         }
 
         // Tạo form Login.
         public void Login()
         {
             // cho người dùng nhập username.
-
-            Console.WriteLine("Please enter your username: ");
-            String username = Console.ReadLine();
-
             // cho người dùng nhập password.
-
-            Console.WriteLine("Please emter your password: ");
-            String password = Console.ReadLine();
-
             // gọi hàm HandleLogin(username, password); 
+
             if (controller.HandleLogin(username, password))
             {
                 Console.WriteLine("Login Success.");
@@ -60,6 +34,7 @@ namespace ASMCSHARP
 
             // nếu hàm trả về true .....(các xử lí tiếp theo, như gọi đến hàm Menu());
             // nếu hàm trả về false - thông báo đăng nhập khoog thành công ;
+            Console.WriteLine("========= Login Form ========");
 
         }
 
@@ -67,7 +42,93 @@ namespace ASMCSHARP
         // Tạo form Signup .
         public void Signup()
         {
+            Console.WriteLine("========= Sign Up Form ========");
+            while (true)
+            {
+                Console.WriteLine("Please Enter Username: ");
+                string username = Console.ReadLine();
+                if (controller.ValidateUsername(username) == null)
+                {
+                    break;
+                }
+                else
+                {
+                    Console.WriteLine(controller.ValidateUsername(username));
+                }
+            }
 
+            while (true)
+            {
+                Console.WriteLine("Please Enter Password: ");
+                string password = Console.ReadLine();
+                if (controller.ValidatePassword(password) == null)
+                {
+                    break;
+                }
+                else
+                {
+                    Console.WriteLine(controller.ValidatePassword(password));
+                }
+            }
+
+            while (true)
+            {
+                Console.WriteLine("Please Enter Fullname: ");
+                string fullName = Console.ReadLine();
+                if (controller.ValidateFullname(fullName) == null)
+                {
+                    break;
+                }
+                else
+                {
+                    Console.WriteLine(controller.ValidateFullname(fullName));
+                }
+            }
+
+            while (true)
+            {
+                Console.WriteLine("Please Enter BirthDay(01-01-1990): ");
+                string DoB = Console.ReadLine();
+                if (controller.ValidateBirthday(DoB) == null)
+                {
+                    DateTime db = Convert.ToDateTime(DoB);
+                    break;
+                }
+                else
+                {
+                    Console.WriteLine(controller.ValidateBirthday(DoB));
+                }
+            }
+
+            while (true)
+            {
+                Console.WriteLine("Please Enter Phone Number: ");
+                string phoneNumber = Console.ReadLine();
+                if(controller.ValidatePhone(phoneNumber) == null)
+                {
+                    break;
+                }
+                else
+                {
+                    Console.WriteLine(controller.ValidatePhone(phoneNumber));
+                }
+            }
+
+            while (true)
+            {
+                Console.WriteLine("Please Enter Identity Card: ");
+                string userId = Console.ReadLine();
+                if (controller.ValidateUserId(userId) == null)
+                {
+                    break;
+                }
+                else
+                {
+                    Console.WriteLine(controller.ValidateUserId(userId));
+                }
+            }
+
+            controller.HandleSignup();
         }
 
         // Tạo form Menu chính.
