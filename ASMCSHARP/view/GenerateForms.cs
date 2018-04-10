@@ -8,6 +8,7 @@ namespace ASMCSHARP
 {
     class GenerateForms
     {
+        Controller controller = new Controller();
         // Tạo form Internet Banking.
         public void InternetBanking()
         {
@@ -47,7 +48,15 @@ namespace ASMCSHARP
             String password = Console.ReadLine();
 
             // gọi hàm HandleLogin(username, password); 
-
+            if (controller.HandleLogin(username, password))
+            {
+                Console.WriteLine("Login Success.");
+                Menu();
+            }
+            else
+            {
+                Console.WriteLine("Login error. Please check again username or password. !!!");
+            }
 
             // nếu hàm trả về true .....(các xử lí tiếp theo, như gọi đến hàm Menu());
             // nếu hàm trả về false - thông báo đăng nhập khoog thành công ;
@@ -64,11 +73,34 @@ namespace ASMCSHARP
         // Tạo form Menu chính.
         public void Menu()
         {
+            Console.WriteLine("--------Generate Menu--------");
             //1. thông tin  người dùng
+            Console.WriteLine("1. Info");
             //2. truy vấn số dư
+            Console.WriteLine("2. Balance inquiry");
             //3. rút tiền
+            Console.WriteLine("3. Withdrawal");
             //4. chuyển khoản
+            Console.WriteLine("4. Transfer");
             //5. lịch sử giao dịch
+            Console.WriteLine("5. Transaction history");
+            int choiceMenu = int.Parse(Console.ReadLine());
+            switch (choiceMenu)
+            {
+                case 1:
+                    break;
+                case 2:
+                    break;
+                case 3:
+                    break;
+                case 4:
+                    break;
+                case 5:
+                    break;
+                default:
+                    Console.WriteLine("Please enter to 1 from 5.");
+                    break;
+            }
         }
 
         // Tạo form thông tin người dùng.
